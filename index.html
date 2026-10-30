@@ -1,0 +1,1042 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trash2Cash — Buang Botol, Dapat Uang!</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Trash2Cash adalah inovasi IoT mahasiswa Indonesia yang mengubah botol plastik bekas menjadi reward bernilai. Dukung lingkungan, dapatkan insentif nyata." />
+  <meta name="keywords" content="Trash2Cash, daur ulang botol plastik, reward daur ulang, IoT sustainability, sampah plastik Indonesia, circular economy" />
+  <meta name="author" content="Tim Trash2Cash" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph (untuk share di WhatsApp, Instagram, Facebook) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Trash2Cash — Buang Botol, Dapat Uang!" />
+  <meta property="og:description" content="Inovasi IoT yang mengubah kebiasaan membuang botol plastik menjadi aksi bernilai — bagi dirimu dan lingkungan." />
+  <meta property="og:image" content="logotrash2cash.png" />
+  <meta property="og:locale" content="id_ID" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Trash2Cash — Buang Botol, Dapat Uang!" />
+  <meta name="twitter:description" content="Inovasi IoT yang mengubah kebiasaan membuang botol plastik menjadi aksi bernilai." />
+  <meta name="twitter:image" content="logotrash2cash.png" />
+
+  <!-- Theme Color (warna browser di mobile) -->
+  <meta name="theme-color" content="#2d8b4e" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logotrash2cash.png" />
+  <link rel="apple-touch-icon" href="logotrash2cash.png" />
+
+  <!-- Fonts FIRST before stylesheet to prevent FOUT / gepeng fallback -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Plus Jakarta Sans: bold, modern, not condensed — perfect heading font -->
+  <!-- Inter: clean body font -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="logotrash2cash.png" alt="Trash2Cash Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <span class="logo-fallback">Trash2Cash</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#problem">Problem</a></li>
+        <li><a href="#how-it-works">Cara Kerja</a></li>
+        <li><a href="#produk">Produk</a></li>
+        <li><a href="#machine-demo">Demo</a></li>
+        <li><a href="#dampak">Dampak</a></li>
+        <li><a href="#about">Tentang Kami</a></li>
+        <li><a href="#app">Aplikasi</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+      <button class="nav-cta nav-cta-app" onclick="document.getElementById('app').scrollIntoView({behavior:'smooth'})">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+        Download App
+      </button>
+      <button class="nav-burger" id="navBurger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-progress" id="navProgress"></div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#problem" class="nav-mobile-link">Problem</a>
+      <a href="#how-it-works" class="nav-mobile-link">Cara Kerja</a>
+      <a href="#produk" class="nav-mobile-link">Produk</a>
+      <a href="#machine-demo" class="nav-mobile-link">Demo Mesin</a>
+      <a href="#dampak" class="nav-mobile-link">Dampak</a>
+      <a href="#about" class="nav-mobile-link">Tentang Kami</a>
+      <a href="#app" class="nav-mobile-link">Download App</a>
+      <a href="#contact" class="nav-mobile-link">Kontak</a>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       STATS TICKER
+  ============================================================ -->
+  <div class="stats-ticker" aria-hidden="true">
+    <div class="stats-ticker-inner" id="statsTickerInner">
+      <span class="stats-ticker-item"><span class="stats-ticker-dot"></span>850 Juta Botol Plastik / Tahun di Indonesia</span>
+      <span class="stats-ticker-item"><span class="stats-ticker-dot"></span>Hanya 10% Plastik yang Didaur Ulang</span>
+      <span class="stats-ticker-item"><span class="stats-ticker-dot"></span>Indonesia Peringkat ke-2 Penghasil Sampah Plastik Laut</span>
+      <span class="stats-ticker-item"><span class="stats-ticker-dot"></span>Trash2Cash: Buang Botol, Dapat Uang! 💚</span>
+      <span class="stats-ticker-item"><span class="stats-ticker-dot"></span>Selaras SDG 11 · SDG 12 · SDG 13</span>
+      <span class="stats-ticker-item"><span class="stats-ticker-dot"></span>IoT + Reward + Daur Ulang = Trash2Cash</span>
+      <!-- duplicate for seamless loop -->
+      <span class="stats-ticker-item"><span class="stats-ticker-dot"></span>850 Juta Botol Plastik / Tahun di Indonesia</span>
+      <span class="stats-ticker-item"><span class="stats-ticker-dot"></span>Hanya 10% Plastik yang Didaur Ulang</span>
+      <span class="stats-ticker-item"><span class="stats-ticker-dot"></span>Indonesia Peringkat ke-2 Penghasil Sampah Plastik Laut</span>
+      <span class="stats-ticker-item"><span class="stats-ticker-dot"></span>Trash2Cash: Buang Botol, Dapat Uang! 💚</span>
+      <span class="stats-ticker-item"><span class="stats-ticker-dot"></span>Selaras SDG 11 · SDG 12 · SDG 13</span>
+      <span class="stats-ticker-item"><span class="stats-ticker-dot"></span>IoT + Reward + Daur Ulang = Trash2Cash</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SECTION 1 — HERO
+  ============================================================ -->
+  <section class="hero" id="hero">
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+    <div class="hero-bg-overlay"></div>
+
+
+
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span>
+        IoT &nbsp;•&nbsp; Sustainability &nbsp;•&nbsp; Circular Economy
+      </div>
+
+      <div class="hero-logo-wrap reveal-up" style="animation-delay:0.1s">
+        <img src="logotrash2cash.png" alt="Trash2Cash" class="hero-logo-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <div class="hero-logo-fallback" style="display:none">
+          <span class="hero-logo-text">Trash<span>2</span>Cash</span>
+        </div>
+      </div>
+
+      <h1 class="hero-headline reveal-up" style="animation-delay:0.2s">
+        BUANG BOTOL,<br /><span class="hero-accent">DAPAT UANG.</span>
+      </h1>
+
+      <p class="hero-sub reveal-up" style="animation-delay:0.35s">
+        Botol plastikmu bukan sampah — itu uang yang belum diambil.<br class="desktop-only" />
+        Trash2Cash hadir biar kamu bisa ambil nilainya.
+      </p>
+
+      <div class="hero-actions reveal-up" style="animation-delay:0.5s">
+        <button class="btn-primary" onclick="document.getElementById('how-it-works').scrollIntoView({behavior:'smooth'})">
+          <span>Lihat Cara Kerja</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="btn-secondary" onclick="document.getElementById('produk').scrollIntoView({behavior:'smooth'})">
+          Lihat Produk Kami
+        </button>
+      </div>
+
+      <!-- Transformation animation -->
+      <div class="hero-transform reveal-up" style="animation-delay:0.65s">
+        <div class="transform-chain">
+          <div class="transform-item active" id="tItem0">
+            <div class="transform-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M9 3h6l1 4H8L9 3z"/><path d="M8 7v10a2 2 0 002 2h4a2 2 0 002-2V7"/><path d="M10 11h4"/></svg></div>
+            <span>Botol Plastik</span>
+          </div>
+          <div class="transform-arrow">→</div>
+          <div class="transform-item" id="tItem1">
+            <div class="transform-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><circle cx="12" cy="12" r="3"/><path d="M8.5 8.5a5 5 0 000 7M15.5 8.5a5 5 0 010 7"/><path d="M5.5 5.5a9 9 0 000 13M18.5 5.5a9 9 0 010 13"/></svg></div>
+            <span>Smart Detection</span>
+          </div>
+          <div class="transform-arrow">→</div>
+          <div class="transform-item" id="tItem2">
+            <div class="transform-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M8 3v4h8V3"/><circle cx="12" cy="14" r="2"/></svg></div>
+            <span>Data Digital</span>
+          </div>
+          <div class="transform-arrow">→</div>
+          <div class="transform-item" id="tItem3">
+            <div class="transform-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5h4a1.5 1.5 0 010 3H10a1.5 1.5 0 000 3h4.5"/></svg></div>
+            <span>Reward</span>
+          </div>
+          <div class="transform-arrow">→</div>
+          <div class="transform-item" id="tItem4">
+            <div class="transform-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M7 19H4.5a2 2 0 01-1.93-2.57l1.36-4.5A2 2 0 015.86 10H7m0 9l3-3m-3 3l-3-3M17 19h2.5a2 2 0 001.93-2.57l-1.36-4.5A2 2 0 0018.14 10H17m0 9l-3-3m3 3l3-3M12 3v8m0-8l-2 2m2-2l2 2"/></svg></div>
+            <span>Recycling</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 2 — PROBLEM
+  ============================================================ -->
+  <section class="problem" id="problem">
+    <div class="container">
+      <div class="problem-header">
+        <p class="section-label scroll-reveal">Permasalahan</p>
+        <h2 class="section-headline scroll-reveal">
+          Satu Botol Emang Kecil.<br />
+          <span class="accent">Tapi Kalau Numpuk?</span>
+        </h2>
+        <p class="section-body scroll-reveal">
+          Setiap hari kita pakai botol plastik, tapi habis itu dibuang begitu aja.
+          Nggak dipilah, nggak dikelola. Lama-lama jadi masalah besar yang susah diatasi sendiri.
+        </p>
+      </div>
+
+
+
+      <!-- Impact Facts dengan visual lebih kuat -->
+      <div class="problem-statements scroll-reveal">
+        <div class="ps-item">
+          <div class="ps-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M9 3h6l1 4H8L9 3z"/><path d="M8 7v10a2 2 0 002 2h4a2 2 0 002-2V7"/><path d="M10 12h4"/></svg>
+          </div>
+          <div class="ps-text">
+            <strong>850 juta botol plastik</strong> digunakan tiap tahun di Indonesia. Sebagian besar cuma sekali pakai, terus langsung ke TPA.
+          </div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M1 4v6h6"/><path d="M23 20v-6h-6"/><path d="M20.5 9A9 9 0 005.6 5.6L1 10M23 14l-4.6 4.4A9 9 0 013.5 15"/></svg>
+          </div>
+          <div class="ps-text">
+            <strong>Cuma 10% plastik</strong> yang beneran didaur ulang di Indonesia — 90% sisanya numpuk di TPA atau nyebar ke lingkungan.
+          </div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M12 3a15 15 0 010 18"/></svg>
+          </div>
+          <div class="ps-text">
+            <strong>Indonesia peringkat 2 dunia</strong> penghasil sampah plastik laut — 1,29 juta ton per tahun masuk ke lautan kita sendiri.
+          </div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div class="ps-text">
+            <strong>Orang males milah sampah</strong> karena nggak ada untungnya buat mereka — hanya 7% rumah tangga yang mau repot-repot pisahkan sampah.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+  <!-- ============================================================
+       SECTION — HOW IT WORKS (Ringkas)
+  ============================================================ -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <p class="section-label scroll-reveal">Cara Kerja</p>
+      <h2 class="section-headline scroll-reveal">
+        4 Langkah,<br /><span class="accent">Langsung Dapat Reward.</span>
+      </h2>
+
+      <div class="steps-grid">
+        <div class="step-card scroll-reveal">
+          <div class="step-number">01</div>
+          <div class="step-icon-wrap">
+            <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="30" height="30"><path d="M9 3h6l1 4H8L9 3z"/><path d="M8 7v10a2 2 0 002 2h4a2 2 0 002-2V7"/><path d="M10 11h4"/></svg></div>
+          </div>
+          <h3 class="step-title">COLLECT</h3>
+          <p class="step-desc">Bawa botol plastikmu ke mesin Trash2Cash.</p>
+          <div class="step-bar"></div>
+        </div>
+        <div class="step-connector scroll-reveal"><div class="connector-line"></div></div>
+        <div class="step-card scroll-reveal" style="animation-delay:0.1s">
+          <div class="step-number">02</div>
+          <div class="step-icon-wrap">
+            <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="30" height="30"><circle cx="12" cy="12" r="3"/><path d="M8.5 8.5a5 5 0 000 7M15.5 8.5a5 5 0 010 7"/><path d="M5.5 5.5a9 9 0 000 13M18.5 5.5a9 9 0 010 13"/></svg></div>
+          </div>
+          <h3 class="step-title">DETECT</h3>
+          <p class="step-desc">Sensor IoT otomatis mendeteksi & validasi botolmu.</p>
+          <div class="step-bar"></div>
+        </div>
+        <div class="step-connector scroll-reveal"><div class="connector-line"></div></div>
+        <div class="step-card scroll-reveal" style="animation-delay:0.2s">
+          <div class="step-number">03</div>
+          <div class="step-icon-wrap">
+            <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="30" height="30"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M8 3v4h8V3"/><circle cx="12" cy="14" r="2"/></svg></div>
+          </div>
+          <h3 class="step-title">RECORD</h3>
+          <p class="step-desc">Data tercatat digital — transparan dan bisa dilacak.</p>
+          <div class="step-bar"></div>
+        </div>
+        <div class="step-connector scroll-reveal"><div class="connector-line"></div></div>
+        <div class="step-card scroll-reveal" style="animation-delay:0.3s">
+          <div class="step-number">04</div>
+          <div class="step-icon-wrap">
+            <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="30" height="30"><rect x="3" y="9" width="18" height="13" rx="1"/><path d="M3 9h18M12 9V22M8 9a4 4 0 010-8c2 0 4 2 4 4M16 9a4 4 0 000-8c-2 0-4 2-4 4"/></svg></div>
+          </div>
+          <h3 class="step-title">REWARD</h3>
+          <p class="step-desc">Langsung dapat insentif. Aksi kecil, nilai nyata.</p>
+          <div class="step-bar"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION PRODUK — Foto & Video Mesin
+  ============================================================ -->
+  <section class="product-section" id="produk">
+    <div class="container">
+      <p class="section-label scroll-reveal">Produk Kami</p>
+      <h2 class="section-headline scroll-reveal">
+        Kenalan Sama<br /><span class="accent">Mesinnya.</span>
+      </h2>
+      <p class="section-body scroll-reveal">
+        Dibuat dari triplek yang dibalut sticker putih gloss — simpel, ringan, dan fungsional.
+        Ini bukan mesin pabrik, ini buatan tangan anak-anak kampus yang percaya sampah punya nilai.
+      </p>
+
+      <div class="product-layout scroll-reveal">
+
+        <!-- Foto Produk — placeholder AI note -->
+        <div class="product-photos">
+          <div class="product-photo-main">
+            <!-- Placeholder karena belum ada foto fisik -->
+            <div class="product-photo-placeholder">
+              <div class="placeholder-inner">
+                <svg viewBox="0 0 80 80" fill="none" width="56" height="56">
+                  <rect x="8" y="16" width="64" height="52" rx="6" stroke="rgba(45,139,78,0.4)" stroke-width="2"/>
+                  <circle cx="28" cy="34" r="7" stroke="rgba(45,139,78,0.4)" stroke-width="2"/>
+                  <path d="M8 52l18-14 14 12 10-8 22 16" stroke="rgba(45,139,78,0.4)" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+                <p class="placeholder-text">Foto Mesin</p>
+                <p class="placeholder-sub">Coming Soon</p>
+              </div>
+            </div>
+            <div class="product-photo-note">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><circle cx="8" cy="8" r="6"/><path d="M8 7v5M8 5.5v.5"/></svg>
+              Foto fisik mesin sedang disiapkan
+            </div>
+          </div>
+
+          <!-- Logo showcase -->
+          <div class="product-logos-row">
+            <div class="product-logo-card">
+              <img src="logotrash2cash.png" alt="Trash2Cash Logo" />
+              <span>Logo Utama</span>
+            </div>
+            <div class="product-logo-card">
+              <img src="logo instagram.png" alt="Instagram Logo" />
+              <span>Instagram</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Produk -->
+        <div class="product-video-wrap">
+          <div class="product-video-label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Video Produk
+          </div>
+          <div class="product-video-container">
+            <video
+              class="product-video"
+              controls
+              preload="metadata"
+              poster=""
+              playsinline
+            >
+              <source src="contoh Product Trash2Cash.mp4" type="video/mp4" />
+              Browser kamu tidak mendukung video. <a href="contoh Product Trash2Cash.mp4">Download videonya</a>.
+            </video>
+            <div class="product-video-note">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13"><path d="M8 1a5 5 0 100 10A5 5 0 008 1zM8 14v1M5 13.2l-.5.9M3.2 11l-.9.5M2 8H1M3.2 5l-.9-.5M5 2.8l-.5-.9"/></svg>
+              ⚠️ Ini adalah gambaran konsep produk yang dibuat dengan bantuan AI — bukan tampilan fisik mesin sebenarnya.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 5.5 — MACHINE ANIMATION
+  ============================================================ -->
+  <section class="machine-section" id="machine-demo">
+    <div class="container">
+      <p class="section-label scroll-reveal" style="color:#a8d5a2">Demo Mesin</p>
+      <h2 class="section-headline light scroll-reveal">
+        Begini Cara<br /><span class="accent-light">Mesin Bekerja.</span>
+      </h2>
+      <p class="section-body light scroll-reveal">
+        Satu aksi sederhana — masukkan botol, dapatkan reward. Lihat simulasi cara mesin Trash2Cash memproses botolmu.
+      </p>
+
+      <div class="machine-demo-wrap scroll-reveal">
+
+        <!-- Scene wrapper -->
+        <div class="machine-scene" id="machineScene">
+
+          <!-- ── Person with bottle ── -->
+          <div class="mscene-person" id="mPerson">
+            <div class="mscene-person-body">
+              <!-- SVG person -->
+              <svg class="person-svg" viewBox="0 0 60 120" fill="none">
+                <!-- Head -->
+                <circle cx="30" cy="14" r="12" fill="#2d8b4e"/>
+                <!-- Body -->
+                <rect x="18" y="28" width="24" height="36" rx="8" fill="#1a5c2e"/>
+                <!-- Left arm (raised to throw) -->
+                <line x1="18" y1="36" x2="4" y2="22" stroke="#2d8b4e" stroke-width="6" stroke-linecap="round" class="person-arm-left"/>
+                <!-- Right arm -->
+                <line x1="42" y1="36" x2="56" y2="48" stroke="#2d8b4e" stroke-width="6" stroke-linecap="round"/>
+                <!-- Legs -->
+                <line x1="24" y1="64" x2="18" y2="94" stroke="#1a5c2e" stroke-width="6" stroke-linecap="round"/>
+                <line x1="36" y1="64" x2="42" y2="94" stroke="#1a5c2e" stroke-width="6" stroke-linecap="round"/>
+                <!-- Leaf cape -->
+                <ellipse cx="30" cy="75" rx="22" ry="10" fill="#4caf71" opacity="0.3" transform="rotate(-15 30 75)"/>
+              </svg>
+            </div>
+            <!-- Bottle held by person -->
+            <div class="mscene-bottle-held" id="mBottleHeld">
+              <svg viewBox="0 0 28 60" fill="none" class="bottle-svg-held">
+                <rect x="10" y="0" width="8" height="8" rx="2" fill="#90caf9"/>
+                <rect x="6" y="8" width="16" height="48" rx="6" fill="#bbdefb" opacity="0.85"/>
+                <rect x="8" y="16" width="12" height="6" rx="2" fill="#e3f2fd" opacity="0.5"/>
+                <rect x="6" y="48" width="16" height="8" rx="4" fill="#90caf9"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- ── Flying bottle ── -->
+          <div class="mscene-bottle-fly" id="mBottleFly">
+            <svg viewBox="0 0 28 60" fill="none" class="bottle-svg-fly">
+              <rect x="10" y="0" width="8" height="8" rx="2" fill="#90caf9"/>
+              <rect x="6" y="8" width="16" height="48" rx="6" fill="#bbdefb" opacity="0.9"/>
+              <rect x="8" y="16" width="12" height="6" rx="2" fill="#e3f2fd" opacity="0.6"/>
+              <rect x="6" y="48" width="16" height="8" rx="4" fill="#90caf9"/>
+            </svg>
+          </div>
+
+          <!-- ── Machine ── -->
+          <div class="mscene-machine" id="mMachine">
+            <!-- Machine body -->
+            <svg class="machine-svg" viewBox="0 0 140 220" fill="none">
+              <!-- Body -->
+              <rect x="5" y="40" width="130" height="175" rx="12" fill="#14381f"/>
+              <rect x="5" y="40" width="130" height="175" rx="12" stroke="#2d8b4e" stroke-width="2"/>
+              <!-- Top funnel -->
+              <rect x="25" y="10" width="90" height="38" rx="8" fill="#1a5c2e"/>
+              <rect x="25" y="10" width="90" height="38" rx="8" stroke="#2d8b4e" stroke-width="1.5"/>
+              <!-- Slot/hole on top -->
+              <ellipse cx="70" cy="28" rx="22" ry="8" fill="#0a1a0d"/>
+              <ellipse cx="70" cy="28" rx="20" ry="6" fill="#081510"/>
+              <!-- Slot highlight -->
+              <path d="M50 26 Q70 22 90 26" stroke="#5dba6b" stroke-width="1.5" opacity="0.6"/>
+              <!-- Screen panel -->
+              <rect x="18" y="58" width="104" height="70" rx="8" fill="#0d2818"/>
+              <rect x="18" y="58" width="104" height="70" rx="8" stroke="#2d8b4e" stroke-width="1.5"/>
+              <!-- Screen glow -->
+              <rect x="22" y="62" width="96" height="62" rx="6" fill="#0a2010" id="machineScreen"/>
+              <!-- Screen content placeholder — updated by JS -->
+              <text x="70" y="90" text-anchor="middle" fill="#4caf71" font-size="9" font-family="monospace" id="mScreenLine1">TRASH2CASH</text>
+              <text x="70" y="104" text-anchor="middle" fill="#a8d5a2" font-size="7" font-family="monospace" id="mScreenLine2">Masukkan botol...</text>
+              <text x="70" y="116" text-anchor="middle" fill="#5dba6b" font-size="7" font-family="monospace" id="mScreenLine3">untuk memulai</text>
+              <!-- Recycle symbol on side -->
+              <text x="105" y="165" text-anchor="middle" fill="#2d8b4e" font-size="28" opacity="0.4"></text>
+              <!-- Dispenser slot (bottom) -->
+              <rect x="30" y="148" width="80" height="20" rx="4" fill="#0a1a0d"/>
+              <rect x="30" y="148" width="80" height="20" rx="4" stroke="#2d8b4e" stroke-width="1"/>
+              <text x="70" y="163" text-anchor="middle" fill="#2d8b4e" font-size="7" font-family="monospace">REWARD SLOT</text>
+              <!-- Bottom base -->
+              <rect x="0" y="208" width="140" height="12" rx="4" fill="#0d2818"/>
+              <!-- LED strip top -->
+              <rect x="25" y="40" width="90" height="3" rx="1" fill="#5dba6b" opacity="0.4" id="mLedStrip"/>
+              <!-- Small buttons -->
+              <circle cx="120" cy="170" r="5" fill="#1a5c2e" stroke="#2d8b4e" stroke-width="1"/>
+              <circle cx="120" cy="185" r="5" fill="#1a5c2e" stroke="#2d8b4e" stroke-width="1"/>
+              <circle cx="120" cy="200" r="4" fill="#e74c3c" opacity="0.7"/>
+              <!-- Logo text on machine -->
+              <text x="70" y="200" text-anchor="middle" fill="#5dba6b" font-size="6.5" font-family="monospace" font-weight="bold">TRASH2CASH</text>
+            </svg>
+
+            <!-- Sensor scan beam -->
+            <div class="machine-scan-beam" id="mScanBeam"></div>
+
+            <!-- Bottle inside machine (during processing) -->
+            <div class="machine-bottle-inside" id="mBottleInside">
+              <svg viewBox="0 0 20 44" fill="none">
+                <rect x="7" y="0" width="6" height="6" rx="2" fill="#90caf9"/>
+                <rect x="4" y="6" width="12" height="34" rx="5" fill="#bbdefb" opacity="0.7"/>
+                <rect x="4" y="34" width="12" height="6" rx="3" fill="#90caf9"/>
+              </svg>
+            </div>
+
+            <!-- Data particles coming out -->
+            <div class="machine-data-particles" id="mDataParticles">
+              <span class="data-p dp1">01</span>
+              <span class="data-p dp2">10</span>
+              <span class="data-p dp3">IO</span>
+              <span class="data-p dp4">01</span>
+              <span class="data-p dp5">11</span>
+              <span class="data-p dp6">DB</span>
+            </div>
+          </div>
+
+          <!-- ── Reward / coin coming out ── -->
+          <div class="mscene-reward" id="mReward">
+            <div class="reward-coins">
+              <div class="reward-coin coin-1">
+                <svg viewBox="0 0 40 40" fill="none">
+                  <circle cx="20" cy="20" r="18" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+                  <circle cx="20" cy="20" r="13" fill="#f1c40f" stroke="#f39c12" stroke-width="1"/>
+                  <text x="20" y="25" text-anchor="middle" fill="#8B5E00" font-size="11" font-weight="bold" font-family="Arial">Rp</text>
+                </svg>
+              </div>
+              <div class="reward-coin coin-2">
+                <svg viewBox="0 0 40 40" fill="none">
+                  <circle cx="20" cy="20" r="18" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+                  <circle cx="20" cy="20" r="13" fill="#f1c40f" stroke="#f39c12" stroke-width="1"/>
+                  <text x="20" y="25" text-anchor="middle" fill="#8B5E00" font-size="11" font-weight="bold" font-family="Arial">Rp</text>
+                </svg>
+              </div>
+              <div class="reward-coin coin-3">
+                <svg viewBox="0 0 40 40" fill="none">
+                  <circle cx="20" cy="20" r="18" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+                  <circle cx="20" cy="20" r="13" fill="#f1c40f" stroke="#f39c12" stroke-width="1"/>
+                  <text x="20" y="25" text-anchor="middle" fill="#8B5E00" font-size="11" font-weight="bold" font-family="Arial">Rp</text>
+                </svg>
+              </div>
+            </div>
+            <div class="reward-label">+REWARD!</div>
+          </div>
+
+          <!-- ── Step labels ── -->
+          <div class="machine-step-labels">
+            <div class="mstep-label" id="mlStep1">
+              <span class="mstep-num">1</span>
+              <span class="mstep-text">Bawa & Masukkan Botol</span>
+            </div>
+            <div class="mstep-label hidden" id="mlStep2">
+              <span class="mstep-num">2</span>
+              <span class="mstep-text">Sensor Mendeteksi</span>
+            </div>
+            <div class="mstep-label hidden" id="mlStep3">
+              <span class="mstep-num">3</span>
+              <span class="mstep-text">Data Tercatat</span>
+            </div>
+            <div class="mstep-label hidden" id="mlStep4">
+              <span class="mstep-num">4</span>
+              <span class="mstep-text">Reward Diterima</span>
+            </div>
+          </div>
+        </div><!-- /machine-scene -->
+
+        <!-- Progress bar -->
+        <div class="machine-progress-wrap">
+          <div class="machine-progress-track">
+            <div class="machine-progress-fill" id="mProgressFill"></div>
+          </div>
+          <div class="machine-progress-steps">
+            <span class="mp-step active" id="mps1">Masukkan</span>
+            <span class="mp-step" id="mps2">Deteksi</span>
+            <span class="mp-step" id="mps3">Proses</span>
+            <span class="mp-step" id="mps4">Reward</span>
+          </div>
+        </div>
+
+        <!-- Control buttons -->
+        <div class="machine-controls">
+          <button class="machine-play-btn" id="mPlayBtn" onclick="startMachineAnim()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Jalankan Demo
+          </button>
+          <button class="machine-reset-btn" id="mResetBtn" onclick="resetMachineAnim()" style="display:none">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 .49-4.94L1 10"/></svg>
+            Ulangi
+          </button>
+        </div>
+
+      </div><!-- /machine-demo-wrap -->
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION — DAMPAK & SDGs (Ringkas)
+  ============================================================ -->
+  <section class="impact-sdg-section" id="dampak">
+    <div class="container">
+      <p class="section-label scroll-reveal">Kenapa Ini Penting</p>
+      <h2 class="section-headline scroll-reveal">
+        Satu Aksi Kecil.<br /><span class="accent">Dampak Yang Nyata.</span>
+      </h2>
+
+      <!-- 3 big stat cards -->
+      <div class="expo-stats scroll-reveal">
+        <div class="expo-stat-card">
+          <div class="expo-stat-num">850 Juta</div>
+          <div class="expo-stat-label">botol plastik digunakan tiap tahun di Indonesia</div>
+        </div>
+        <div class="expo-stat-card">
+          <div class="expo-stat-num">10%</div>
+          <div class="expo-stat-label">yang beneran didaur ulang — sisanya numpuk</div>
+        </div>
+        <div class="expo-stat-card">
+          <div class="expo-stat-num">#2</div>
+          <div class="expo-stat-label">Indonesia penghasil sampah plastik laut di dunia</div>
+        </div>
+      </div>
+
+      <!-- SDG tags + Value ringkas -->
+      <div class="expo-sdg-value scroll-reveal">
+        <div class="expo-sdg-tags">
+          <span class="expo-sdg-tag" style="--c:#f99d26">SDG 11 — Kota Berkelanjutan</span>
+          <span class="expo-sdg-tag" style="--c:#c5192d">SDG 12 — Konsumsi Bertanggung Jawab</span>
+          <span class="expo-sdg-tag" style="--c:#3f7e44">SDG 13 — Aksi Iklim</span>
+        </div>
+        <div class="expo-value-row">
+          <div class="expo-value-item">
+            <div class="expo-value-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/></svg>
+            </div>
+            <strong>Lingkungan</strong>
+            <span>Sampah berkurang, lingkungan lebih bersih</span>
+          </div>
+          <div class="expo-value-item">
+            <div class="expo-value-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5h4a1.5 1.5 0 010 3H10a1.5 1.5 0 000 3h4.5"/></svg>
+            </div>
+            <strong>Ekonomi</strong>
+            <span>Kamu dapat reward langsung, bukan janji doang</span>
+          </div>
+          <div class="expo-value-item">
+            <div class="expo-value-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><circle cx="9" cy="7" r="3"/><path d="M2 20c0-3.3 3.1-6 7-6s7 2.7 7 6"/><circle cx="18" cy="8" r="2.5"/><path d="M21 20c0-2.8-1.8-5-4-5.5"/></svg>
+            </div>
+            <strong>Komunitas</strong>
+            <span>Kebiasaan baru yang nular ke orang sekitar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION — TENTANG TIM (Ringkas)
+  ============================================================ -->
+  <section class="about-mini" id="about">
+    <div class="container">
+      <div class="about-mini-layout scroll-reveal">
+        <div class="about-mini-left">
+          <img src="logotrash2cash.png" alt="Trash2Cash" class="about-mini-logo" />
+          <div class="about-mini-badges">
+            <span>🎓 Student Project</span>
+            <span>🇮🇩 Made in Indonesia</span>
+            <span>♻️ IoT × Sustainability</span>
+          </div>
+        </div>
+        <div class="about-mini-right">
+          <p class="section-label" style="color:#a8d5a2">Tentang Kami</p>
+          <h2 class="section-headline light">
+            Dibuat dari<br /><span class="accent-light">Kamar Kos,</span><br />bukan Silicon Valley.
+          </h2>
+          <p class="about-mini-desc">
+            Trash2Cash lahir dari kelas, bukan kantor startup. Kita muak lihat botol plastik numpuk tapi nggak ada yang ngapa-ngapain — jadi kita bikin sendiri solusinya.
+          </p>
+          <div class="about-mini-visi">
+            <div class="about-mini-visi-label">Visi</div>
+            <p>Pengen jadi solusi yang beneran dipakai — bukan cuma proyek kampus yang berdebu di laci.</p>
+          </div>
+          <div class="about-mini-roadmap">
+            <div class="mini-phase active-phase">
+              <span class="mini-phase-dot"></span>
+              <span class="mini-phase-label">Prototype</span>
+              <span class="mini-phase-status">In Progress</span>
+            </div>
+            <div class="mini-phase-line"></div>
+            <div class="mini-phase">
+              <span class="mini-phase-dot future"></span>
+              <span class="mini-phase-label">Testing</span>
+              <span class="mini-phase-status planned">Planned</span>
+            </div>
+            <div class="mini-phase-line"></div>
+            <div class="mini-phase">
+              <span class="mini-phase-dot future"></span>
+              <span class="mini-phase-label">Pilot di Kampus</span>
+              <span class="mini-phase-status planned">Planned</span>
+            </div>
+            <div class="mini-phase-line"></div>
+            <div class="mini-phase">
+              <span class="mini-phase-dot future"></span>
+              <span class="mini-phase-label">Scale Up</span>
+              <span class="mini-phase-status vision">Vision</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION B — DOWNLOAD APLIKASI
+  ============================================================ -->
+  <section class="app-section" id="app">
+    <div class="app-bg-glow"></div>
+    <div class="container">
+      <div class="app-layout">
+
+        <!-- Left: Content -->
+        <div class="app-content">
+          <p class="section-label scroll-reveal">Mobile Application</p>
+          <h2 class="section-headline scroll-reveal">
+            Trash2Cash <br /><span class="accent">di Genggamanmu.</span>
+          </h2>
+          <p class="section-body scroll-reveal">
+            Pantau poin reward, lacak kontribusi lingkunganmu, dan temukan titik
+            pengumpulan terdekat — semua dalam satu aplikasi yang simpel dan intuitif.
+          </p>
+
+          <!-- App features list -->
+          <div class="app-features scroll-reveal">
+            <div class="app-feat">
+              <div class="app-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="100%" height="100%"><rect x="3" y="12" width="4" height="8"/><rect x="10" y="7" width="4" height="13"/><rect x="17" y="3" width="4" height="17"/></svg></div>
+              <div class="app-feat-text">
+                <strong>Dashboard Reward</strong>
+                <span>Pantau poin dan reward yang kamu kumpulkan secara real-time</span>
+              </div>
+            </div>
+            <div class="app-feat">
+              <div class="app-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="100%" height="100%"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+              <div class="app-feat-text">
+                <strong>Lokasi Mesin</strong>
+                <span>Temukan titik pengumpulan Trash2Cash terdekat dari lokasimu</span>
+              </div>
+            </div>
+            <div class="app-feat">
+              <div class="app-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="100%" height="100%"><path d="M9 12h6M9 16h6M9 8h3M5 4h14a1 1 0 011 1v14a1 1 0 01-1 1H5a1 1 0 01-1-1V5a1 1 0 011-1z"/></svg></div>
+              <div class="app-feat-text">
+                <strong>Riwayat Transaksi</strong>
+                <span>Lihat semua histori botol yang kamu tukarkan dengan detail lengkap</span>
+              </div>
+            </div>
+            <div class="app-feat">
+              <div class="app-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="100%" height="100%"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg></div>
+              <div class="app-feat-text">
+                <strong>Notifikasi Reward</strong>
+                <span>Dapatkan notifikasi langsung setiap kali reward berhasil diterima</span>
+              </div>
+            </div>
+            <div class="app-feat">
+              <div class="app-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="100%" height="100%"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/></svg></div>
+              <div class="app-feat-text">
+                <strong>Jejak Dampak</strong>
+                <span>Lihat estimasi dampak lingkungan dari kontribusimu</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Download buttons -->
+          <div class="download-buttons scroll-reveal">
+            <a href="#" class="dl-btn dl-coming" id="dlPlayStore" onclick="showComingSoon(event, 'Google Play Store')">
+              <div class="dl-btn-inner">
+                <svg class="dl-store-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76a2 2 0 0 0 2.18-.23l12.37-7.19-2.8-2.8L3.18 23.76zm17.68-9.18L17.5 12l3.36-2.57a2 2 0 0 0 0-3.08L4.62.47A2 2 0 0 0 2 2v20a2 2 0 0 0 2.62 1.9l16.24-6.24a2 2 0 0 0 0-3.08zM5 18V6l9.5 6L5 18z"/></svg>
+                <div class="dl-text">
+                  <span class="dl-soon-badge">Coming Soon</span>
+                  <span class="dl-store-name">Google Play</span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="dl-btn dl-coming" id="dlAppStore" onclick="showComingSoon(event, 'App Store')">
+              <div class="dl-btn-inner">
+                <svg class="dl-store-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                <div class="dl-text">
+                  <span class="dl-soon-badge">Coming Soon</span>
+                  <span class="dl-store-name">App Store</span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="dl-btn dl-apk" onclick="showComingSoon(event, 'APK')">
+              <div class="dl-btn-inner">
+                <svg class="dl-store-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zm7-18L5.33 8h3.84v6h5.66V8h3.84L12 2z"/></svg>
+                <div class="dl-text">
+                  <span class="dl-soon-badge">Beta Soon</span>
+                  <span class="dl-store-name">Download APK</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <p class="app-disclaimer scroll-reveal">
+            Catatan: Aplikasi saat ini dalam tahap pengembangan. Tombol di atas adalah
+            placeholder — link akan diperbarui saat aplikasi tersedia.
+          </p>
+        </div>
+
+        <!-- Right: Real App Mockup Image -->
+        <div class="app-mockup-wrap scroll-reveal">
+          <div class="app-mockup-real">
+            <img
+              src="Trash2Cash Eco Rewards App Mockup.png"
+              alt="Trash2Cash App Mockup"
+              class="app-mockup-img"
+            />
+            <div class="app-mockup-ai-note">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13"><circle cx="8" cy="8" r="6"/><path d="M8 7v5M8 5.5v.5"/></svg>
+              Tampilan ini adalah mockup desain konsep aplikasi Trash2Cash
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Coming soon registration -->
+      <div class="app-waitlist scroll-reveal">
+        <div class="waitlist-inner">
+          <div class="waitlist-text">
+            <h3 class="waitlist-title">Jadilah yang Pertama Tahu!</h3>
+            <p class="waitlist-sub">Daftarkan email kamu dan dapatkan notifikasi ketika aplikasi Trash2Cash siap diluncurkan.</p>
+          </div>
+          <form class="waitlist-form" id="waitlistForm" onsubmit="handleWaitlist(event)">
+            <input type="email" class="waitlist-input" placeholder="emailkamu@contoh.com" required id="waitlistEmail" />
+            <button type="submit" class="waitlist-btn">
+              <span id="waitlistBtnText">Daftarkan Saya</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </form>
+          <p class="waitlist-note" id="waitlistNote"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coming Soon Toast -->
+    <div class="cs-toast" id="csToast">
+      <span class="cs-toast-icon">🚀</span>
+      <div class="cs-toast-text">
+        <strong id="csToastTitle">Segera Hadir!</strong>
+        <span id="csToastSub">Aplikasi dalam pengembangan</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION C — CONTACT US
+  ============================================================ -->
+  <section class="contact" id="contact">
+    <div class="container">
+
+      <p class="section-label scroll-reveal">Hubungi Kami</p>
+      <h2 class="section-headline scroll-reveal">
+        Hubungi<br /><span class="accent">Tim Kami.</span>
+      </h2>
+      <p class="section-body scroll-reveal">
+        Punya pertanyaan, ide, atau ingin berkolaborasi? Hubungi kami langsung melalui platform di bawah ini.
+      </p>
+
+      <!-- Direct contact buttons -->
+      <div class="contact-direct scroll-reveal">
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/6285358342364?text=Halo%20Trash2Cash!"
+           target="_blank" rel="noopener noreferrer"
+           class="contact-direct-btn wa-btn">
+          <div class="cdb-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </div>
+          <div class="cdb-text">
+            <span class="cdb-label">Chat via WhatsApp</span>
+            <span class="cdb-sub">+62 853-5834-2364</span>
+          </div>
+          <div class="cdb-arrow">→</div>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/trash2cash_id"
+           target="_blank" rel="noopener noreferrer"
+           class="contact-direct-btn ig-btn">
+          <div class="cdb-icon">
+            <img src="logo instagram.png" alt="Instagram" style="width:100%;height:100%;object-fit:contain;border-radius:8px;" />
+          </div>
+          <div class="cdb-text">
+            <span class="cdb-label">DM di Instagram</span>
+            <span class="cdb-sub">@trash2cash_id</span>
+          </div>
+          <div class="cdb-arrow">→</div>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:trash2cash@email.com?subject=Halo%20Trash2Cash!"
+           class="contact-direct-btn email-btn">
+          <div class="cdb-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <div class="cdb-text">
+            <span class="cdb-label">Kirim Email</span>
+            <span class="cdb-sub">trash2cash@email.com</span>
+          </div>
+          <div class="cdb-arrow">→</div>
+        </a>
+
+      </div>
+
+      <!-- Info bawah -->
+      <div class="contact-note scroll-reveal">
+        <p>Proyek Inovasi Mahasiswa &nbsp;·&nbsp; IoT Sustainability &nbsp;·&nbsp; 2025</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 12 — FINAL CTA
+  ============================================================ -->
+  <section class="final-cta" id="cta">
+    <canvas class="cta-canvas" id="ctaCanvas"></canvas>
+    <div class="cta-overlay"></div>
+    <div class="cta-content">
+      <div class="cta-logo-wrap scroll-reveal">
+        <img src="logotrash2cash.png" alt="Trash2Cash" class="cta-logo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <div class="cta-logo-fallback" style="display:none">
+          <span class="cta-logo-text">Trash<span>2</span>Cash</span>
+        </div>
+      </div>
+      <h2 class="cta-headline scroll-reveal">
+        SATU BOTOL.<br />
+        SATU AKSI.<br />
+        <span class="cta-accent">SATU PERUBAHAN.</span>
+      </h2>
+      <p class="cta-tagline scroll-reveal">Trash2Cash — Buang Botol, Dapat Uang!</p>
+      <div class="cta-actions scroll-reveal">
+        <button class="btn-cta-primary" onclick="document.getElementById('hero').scrollIntoView({behavior:'smooth'})">
+          Mulai dari Satu Botol
+        </button>
+        <button class="btn-cta-secondary" onclick="document.getElementById('idea').scrollIntoView({behavior:'smooth'})">
+          Pelajari Inovasinya
+        </button>
+      </div>
+      <p class="cta-footer scroll-reveal">
+        Sebuah Inovasi Mahasiswa • Proyek IoT Sustainability • Indonesia
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-top-inner">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="logotrash2cash.png" alt="Trash2Cash" class="footer-logo-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <span class="footer-logo-text" style="display:none">Trash2Cash</span>
+          </div>
+          <p class="footer-brand-desc">
+            Inovasi IoT mahasiswa Indonesia untuk mendorong pengelolaan
+            sampah plastik yang lebih bertanggung jawab dan bernilai.
+          </p>
+          <div class="footer-social-mini">
+            <a href="https://instagram.com/trash2cash_id" target="_blank" rel="noopener noreferrer" class="fsm-link" aria-label="Instagram">
+              <img src="logo instagram.png" alt="Instagram" style="width:20px;height:20px;object-fit:contain;border-radius:4px;" />
+            </a>
+            <a href="#" class="fsm-link" aria-label="YouTube" onclick="return false">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+            </a>
+            <a href="#" class="fsm-link" aria-label="LinkedIn" onclick="return false">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Nav links -->
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Beranda</a></li>
+            <li><a href="#problem">Permasalahan</a></li>
+            <li><a href="#sdgs">SDGs</a></li>
+            <li><a href="#how-it-works">Cara Kerja</a></li>
+            <li><a href="#iot">Sistem IoT</a></li>
+            <li><a href="#swot">Analisis SWOT</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Inovasi</h4>
+          <ul class="footer-links">
+            <li><a href="#idea">Ide Dasar</a></li>
+            <li><a href="#journey">User Journey</a></li>
+            <li><a href="#value">Value Creation</a></li>
+            <li><a href="#impact">Dampak</a></li>
+            <li><a href="#future">Roadmap</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Informasi</h4>
+          <ul class="footer-links">
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#about">Visi & Misi</a></li>
+            <li><a href="#app">Download App</a></li>
+            <li><a href="#contact">Kontak</a></li>
+            <li><a href="#contact">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- App download -->
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Aplikasi</h4>
+          <p class="footer-app-desc">Segera hadir di:</p>
+          <div class="footer-app-btns">
+            <a href="#app" class="footer-app-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M3.18 23.76a2 2 0 0 0 2.18-.23l12.37-7.19-2.8-2.8L3.18 23.76zm17.68-9.18L17.5 12l3.36-2.57a2 2 0 0 0 0-3.08L4.62.47A2 2 0 0 0 2 2v20a2 2 0 0 0 2.62 1.9l16.24-6.24a2 2 0 0 0 0-3.08zM5 18V6l9.5 6L5 18z"/></svg>
+              Google Play
+            </a>
+            <a href="#app" class="footer-app-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              App Store
+            </a>
+          </div>
+          <div class="footer-sdgs">
+            <span>SDG 11</span>
+            <span>SDG 12</span>
+            <span>SDG 13</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <p class="footer-copy">© 2025 Trash2Cash — Proyek Inovasi Mahasiswa Indonesia</p>
+        <p class="footer-copy-right">Dibuat dengan ❤️ untuk lingkungan yang lebih baik</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll ke atas">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
